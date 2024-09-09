@@ -13,9 +13,44 @@
 
 using namespace std;
 
+//Declaring float variables.
+float propetryValue, assessedValue, propetryTax, taxRate;
+
+//Function that takes one parameter taht will be uses to calculate the assessedValue. 
+float calculateAssesedValue(float propetryValue) {
+    float assessedValue = propetryValue * .6;
+
+    cout << "Assesed Value: $" << assessedValue << endl;
+
+    return assessedValue;
+}
+
+//Function that takes 2 parameters to calculate the amount of taxRate the user will pay for the year.
+void calculatePropertyTax(float assessedValue, float taxRate) {
+    float propetryTax = (assessedValue/100) * taxRate;
+
+    cout << "Property Tax: $" << propetryTax << endl;
+}
+
 int main(){
 
-    cout << "Hello World." << endl;
+    cout << endl;
+
+    //Asks the user for the propertyValue.
+    cout << "Enter actual property value: $";
+    cin >> propetryValue; 
+
+    //Request the user to type the tax per $100 of the assessed value.
+    cout << "Enter the amount of tax per $100 of assesed value: $";
+    cin >> taxRate; 
+
+    cout << endl;
+
+    cout << "Property Value: $" << propetryValue << endl;
+    assessedValue = calculateAssesedValue(propetryValue);
+    calculatePropertyTax(assessedValue, taxRate);
+
+    cout << endl;
 
     return 0;
 }
