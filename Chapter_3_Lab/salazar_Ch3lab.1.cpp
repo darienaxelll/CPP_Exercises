@@ -13,12 +13,16 @@
 
 using namespace std;
 
+//Constants.
+float MADISON_TAX_PERCENT = .6;
+int PREVIOUS_YEAR = 100;
+
 //Declaring float variables.
 float propetryValue, assessedValue, propetryTax, taxRate;
 
 //Function that takes one parameter taht will be uses to calculate the assessedValue. 
 float calculateAssesedValue(float propetryValue) {
-    float assessedValue = propetryValue * .6;
+    float assessedValue = propetryValue * MADISON_TAX_PERCENT;
 
     cout << "Assesed Value: $" << assessedValue << endl;
 
@@ -27,7 +31,7 @@ float calculateAssesedValue(float propetryValue) {
 
 //Function that takes 2 parameters to calculate the amount of taxRate the user will pay for the year.
 void calculatePropertyTax(float assessedValue, float taxRate) {
-    float propetryTax = (assessedValue/100) * taxRate;
+    float propetryTax = (assessedValue/PREVIOUS_YEAR) * taxRate;
 
     cout << "Property Tax: $" << propetryTax << endl;
 }
