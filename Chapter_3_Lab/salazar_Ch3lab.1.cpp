@@ -14,26 +14,25 @@
 using namespace std;
 
 //Constants.
-float MADISON_TAX_PERCENT = .6;
-int PREVIOUS_YEAR = 100;
+const double MADISON_TAX_PERCENT = .6;
 
 //Declaring float variables.
-float propetryValue, assessedValue, propetryTax, taxRate;
+double propetryValue, assessedValue, propetryTax, taxRate;
 
 //Function that takes one parameter taht will be uses to calculate the assessedValue. 
-float calculateAssesedValue(float propetryValue) {
-    float assessedValue = propetryValue * MADISON_TAX_PERCENT;
+double calculateAssesedValue(double propetryValue) {
+    double assessedValue = propetryValue * MADISON_TAX_PERCENT;
 
-    cout << "Assesed Value: $" << assessedValue << endl;
+    cout << "Assesed Value: $" << assessedValue << fixed << setprecision(2) << endl;
 
     return assessedValue;
 }
 
 //Function that takes 2 parameters to calculate the amount of taxRate the user will pay for the year.
-void calculatePropertyTax(float assessedValue, float taxRate) {
-    float propetryTax = (assessedValue/PREVIOUS_YEAR) * taxRate;
+void calculatePropertyTax(double assessedValue, double taxRate) {
+    double propetryTax = (assessedValue/100) * taxRate;
 
-    cout << "Property Tax: $" << propetryTax << endl;
+    cout << "Property Tax: $" << propetryTax << fixed << setprecision(2) << endl;
 }
 
 int main(){
@@ -50,7 +49,7 @@ int main(){
 
     cout << endl;
 
-    cout << "Property Value: $" << propetryValue << endl;
+    cout << "Property Value: $" << propetryValue << fixed <<  setprecision(2) << endl;
     assessedValue = calculateAssesedValue(propetryValue);
     calculatePropertyTax(assessedValue, taxRate);
 
