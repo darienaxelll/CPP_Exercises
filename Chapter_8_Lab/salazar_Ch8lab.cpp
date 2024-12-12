@@ -1,12 +1,14 @@
-//************************************************************************************************************************************ 
+//***************************************************************************
 // Payroll Program
 // Programer: Darien Salazar
 // Completed: 12/8/24
-// Status: Resubmitted. Addressed "setpreccision" issue by adding <iomanip> header. Added addidional notes and intro portion.
+// Status: Resubmitted. Addressed "setpreccision" issue by adding <iomanip> header. 
+//         Added addidional notes and intro portion.
 //
-// Purpose: This program should take the information from a .dat file. Once the information is read, is will be assignes to a variable
-//          for future calulation of gross pay of each employee. Once the information is calulated, it will be displayed to the user.
-//************************************************************************************************************************************ 
+// Purpose: This program should take the information from a .dat file. Once the information is read, 
+//          is will be assignes to a variable for future calulation of gross pay of each employee. 
+//          Once the information is calulated, it will be displayed to the user.
+//*************************************************************************
 
 #include <iostream>     // input/output declarations
 #include <iomanip>      // i/o manupulator declarations

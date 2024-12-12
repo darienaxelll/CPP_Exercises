@@ -26,7 +26,7 @@ void displayPlaylist(newSong[], int);
 
 int main () {
 
-    newSong playlist[4];                                   //Initializes an array of 10 elements.
+    newSong playlist[10];                                   //Initializes an array of 10 elements.
     int arrSize = sizeof(playlist)/sizeof(playlist[0]);     //Gets the size of the array.
 
     inputInfo(playlist, arrSize);
